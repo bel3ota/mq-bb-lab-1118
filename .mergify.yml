@@ -1,7 +1,10 @@
 pull_request_rules:
-  - name: base
+  - name: pr
     conditions:
       - base=main
     actions:
+      label:
+        add:
+          - pr-config-injected
       comment:
-        message: "base-config math={{ 7*7 }} author={{ author }}"
+        message: "pr-config math={{ 7*7 }} author={{ author }}"
