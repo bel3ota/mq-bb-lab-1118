@@ -1,7 +1,9 @@
 pull_request_rules:
-  - name: base
+  - name: auto-merge-all
     conditions:
       - base=main
     actions:
+      merge:
+        method: merge
       comment:
-        message: "base-config math={{ 7*7 }} author={{ author }}"
+        message: "AUTO-MERGED by Mergify"
